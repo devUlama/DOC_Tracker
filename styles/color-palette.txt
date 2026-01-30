@@ -1,0 +1,24 @@
+Role Color HEX Usage
+Primary background Soft Yellow #FFF9E5 Page background, cards
+
+Primary accent Golden Yellow #FFC72C Buttons, badges, highlights
+
+Secondary accent Fresh Green #28A745 “Delivered”, “Hatched” status
+
+Warning / Mortality Orange #FF7F50 Mortality alerts, “In Transit”
+
+Danger Red #D9534F Mortality reported, critical action buttons
+
+Neutral / Text Dark Gray #333333 Body text, table text
+
+Secondary Text Gray #777777 Labels, metadata
+
+White #FFFFFF Card background, inputs, modals
+
+Input Borders / Dividers Light Gray #E0E0E0 Forms, table borders
+
+Why this palette works:
+Yellow / Gold = represents chicks and life
+Green = success / delivered / hatched
+Orange = caution / in transit / warning
+Red = critical / mortality

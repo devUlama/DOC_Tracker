@@ -1,0 +1,158 @@
+:root {
+  font-size: clamp(0.875em, calc(0.875em + 0.4vw), 1.1em);
+  /* || Colors || */
+  --bg-color: hsl(46, 100%, 97%);
+  --btn-color: #ffc72c;
+  --txt-color: #333333;
+  --meta-data-color: #777777;
+  --border-color: #e0e0e0;
+  --bg-card-color: #ffffff;
+
+  /* || fonts || */
+
+  /* || Spacing || */
+  --card-padding: 1.43em;
+  --form-field-gap: 1.1em;
+
+  /* || Reset ||*/
+  box-sizing: border-box;
+}
+
+/* || General Reset ||*/
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  transition: box-shadow 0.25s ease, transform 0.15s ease, font-size 0.15s ease,
+    border-color 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* || End Of General Reset ||*/
+
+/* || body styles ||*/
+header {
+  background-color: hsl(43, 100%, 91%);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+}
+
+/* || End of Body Styles ||*/
+
+/* || Header Styles||*/
+.header {
+  padding: 1.14em;
+  display: flex;
+  gap: 1.142em;
+}
+.header > h1 {
+  align-self: center;
+}
+
+/* || End Of Header Styles||*/
+
+/* || Login Section Styles ||*/
+.login-section {
+  width: 80%;
+  max-width: 404px;
+  margin: 2.14em auto 0;
+  padding: var(--card-padding);
+}
+
+.login-section_title {
+  text-align: center;
+  margin-bottom: 1.14em;
+}
+
+.login-section_form input,
+button,
+a {
+  display: block;
+  width: 100%;
+}
+/* || End Of Login Section Styles ||*/
+
+/* || Login Form Element ||*/
+.form-element {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-field-gap);
+}
+
+.form-element > input {
+  padding: 0.6em 1em;
+  border: 1px solid var(--border-color);
+}
+.form-element a {
+  color: var(--meta-data-color);
+  text-align: center;
+}
+/* || End Of Login Form Element ||*/
+
+/* || button ||*/
+.button {
+  background-color: var(--btn-color);
+  cursor: pointer;
+}
+/* || End Of button ||*/
+
+/* || Form-heading ||*/
+.object-image {
+  padding: 1.14em;
+  display: flex;
+  gap: 1.142em;
+  justify-content: center;
+}
+
+.object-image .text {
+  align-self: center;
+}
+/* || End Form haeding ||*/
+input:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+input:active {
+  transform: scale(0.98) rotate(0.3deg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:focus {
+  /* border: 1px solid hsl(0, 0%, 99%);
+  box-shadow: inset 5px 3px hsl(0, 0%, 73%), inset -5px -3px hsl(0, 0%, 73%); */
+  outline: none;
+  border-color: #ffc72c;
+  box-shadow: 0 0 0 3px rgba(255, 199, 44, 0.35), 0 8px 18px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  font-size: 1.02rem;
+}
