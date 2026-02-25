@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product page</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="header header--fixed">
+      <figure>
+        <img
+          src="images/small_logo.png"
+          width="43"
+          height="42"
+          alt="company_logo"
+        />
+      </figure>
+      <h1>DOC Tracker</h1>
+    </header>
+    <main class="product-main">
+      <div class="product-main_heading">
+        <h2>Hello, Musa!</h2>
+        <p>select your chicks below</p>
+      </div>
+      <div class="products">
+        <section class="products_item object-image" id="">
+          <figure>
+            <img
+              src="images/chick1.png"
+              alt="Broilers chick"
+              width="100px"
+              height="67px"
+            />
+          </figure>
+          <div class="product-details">
+            <h3>Broilers chick</h3>
+            <p><span class="amount">#1500</span> each</p>
+            <form action="cart.html">
+              <div class="qty">
+                <label for="broilers-qty">Quantity: </label>
+                <input
+                  type="text"
+                  id="broilers-qty"
+                  name="qty"
+                  class="qty-field"
+                />
+              </div>
+              <!-- <input type="text" name="product_id" value="" /> -->
+              <input
+                type="submit"
+                value="Buy Now"
+                class="button button--white-text"
+              />
+            </form>
+          </div>
+        </section>
+
+        <section class="products_item object-image" id="">
+          <figure>
+            <img
+              src="images/chick2.png"
+              alt="layer chick"
+              width="100px"
+              height="67px"
+            />
+          </figure>
+          <div class="product-details">
+            <h3>Layers chick</h3>
+            <p><span class="amount">#2000</span> each</p>
+            <form action="cart.html">
+              <div class="qty">
+                <label for="layer-qty">Quantity: </label>
+                <input
+                  type="text"
+                  id="layer-qty"
+                  name="qty"
+                  class="qty-field"
+                />
+                <!-- <input type="text" name="product_id" value="" /> -->
+              </div>
+              <input
+                type="submit"
+                value="Buy Now"
+                class="button button--white-text"
+              />
+            </form>
+          </div>
+        </section>
+
+        <section class="products_item object-image" id="">
+          <figure>
+            <img
+              src="images/chick1.png"
+              alt="Organic chick"
+              width="100px"
+              height="67px"
+            />
+          </figure>
+          <div class="product-details">
+            <h3>Organic chick</h3>
+            <p><span class="amount">#2500</span> each</p>
+            <form action="cart.html">
+              <div class="qty">
+                <label for="organic-qty">Quantity: </label>
+                <input
+                  type="text"
+                  id="organic-qty"
+                  name="qty"
+                  class="qty-field"
+                />
+              </div>
+
+              <!-- <input type="text" name="product_id" value="" /> -->
+              <input
+                type="submit"
+                value="Buy Now"
+                class="button button--white-text"
+              />
+            </form>
+          </div>
+        </section>
+      </div>
+      <div class="checkout-button-container">
+        <button class="button checkout-button">Proceed to Checkout</button>
+      </div>
+    </main>
+  </body>
+</html>

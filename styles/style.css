@@ -42,7 +42,7 @@ img {
   object-fit: cover;
 }
 
-input,
+.login-section input,
 textarea,
 select,
 button {
@@ -57,6 +57,20 @@ a {
 
 /* || End Of General Reset ||*/
 
+/* || Utility class||*/
+.wrap {
+  white-space: nowrap;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.inline-link {
+  display: inline;
+}
+/* ||End of  Utility class||*/
+
 /* || body styles ||*/
 header {
   background-color: hsl(43, 100%, 91%);
@@ -64,7 +78,7 @@ header {
 
 main {
   flex-grow: 1;
-  display: flex;
+  /* display: flex; */
 }
 
 /* || End of Body Styles ||*/
@@ -75,11 +89,23 @@ main {
   display: flex;
   gap: 1.142em;
 }
+
 .header > h1 {
   align-self: center;
 }
 
 /* || End Of Header Styles||*/
+
+/* || fixed Header Styles||*/
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* || End Of fixed Header Styles||*/
 
 /* || Login Section Styles ||*/
 .login-section {
@@ -95,7 +121,7 @@ main {
 }
 
 .login-section_form input,
-button,
+.login-section_form button,
 a {
   display: block;
   width: 100%;
@@ -123,14 +149,40 @@ a {
 .button {
   background-color: var(--btn-color);
   cursor: pointer;
+  padding: 0.5em 1.3em;
+  border: 0;
+  box-shadow: 1.6px 1.6px 1.5px hsl(44, 100%, 49%)
+    /* -1.2px -1.2px 1px hsl(44, 100%, 49%) */;
+  border-radius: 3px;
 }
+
+.button--white-text {
+  color: white;
+  text-shadow: 1.3px 1.3px 3px rgba(0, 0, 0, 0.863);
+}
+
 /* || End Of button ||*/
+
+/* || sign-up button||*/
+.signUp-button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.signUp-button a {
+  color: black;
+}
+/* ||End of sign-up button||*/
 
 /* || Form-heading ||*/
 .object-image {
   padding: 1.14em;
   display: flex;
   gap: 1.142em;
+}
+
+.object-image--center-align {
   justify-content: center;
 }
 
@@ -138,21 +190,111 @@ a {
   align-self: center;
 }
 /* || End Form haeding ||*/
-input:hover {
+.login-section input:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-input:active {
+.login-section input:active {
   transform: scale(0.98) rotate(0.3deg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-input:focus {
-  /* border: 1px solid hsl(0, 0%, 99%);
-  box-shadow: inset 5px 3px hsl(0, 0%, 73%), inset -5px -3px hsl(0, 0%, 73%); */
+.login-section input:focus {
   outline: none;
   border-color: #ffc72c;
   box-shadow: 0 0 0 3px rgba(255, 199, 44, 0.35), 0 8px 18px rgba(0, 0, 0, 0.15);
   transform: scale(1.02);
   font-size: 1.02rem;
+}
+
+/* || PRODUCT PAGE ||*/
+.product-main {
+  padding: var(--card-padding);
+
+  /*  margins to adapt to the fixed header and check out bottom */
+  margin-bottom: 48.875px;
+  margin-top: 77px;
+}
+.product-main_heading {
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 16px;
+}
+
+.products_item {
+  background-color: var(--bg-card-color);
+  flex-grow: 1;
+  padding: var(--card-padding);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px hsla(0, 0%, 70%, 0.685),
+    -1px -1px 3px hsla(0, 0%, 70%, 0.678);
+}
+/* to be change later*/
+.products_item input {
+}
+/* end of to be change later*/
+
+.qty-field {
+  width: 60px;
+}
+
+.products_item figure {
+  display: flex;
+}
+
+.amount {
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.checkout-button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  width: 100%;
+  margin-top: 0;
+}
+
+.checkout-button {
+  display: block;
+  margin: 0.5em auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-weight: bold;
+}
+
+.product-main > * + * {
+  margin-top: 1.2rem;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.qty {
+  background-color: hsl(46, 100%, 94%);
+  padding: 0.3em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.493);
+}
+
+.product-details form {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.qty input {
+  padding: 0.3em 0.2em;
+}
+
+.qty input:focus {
+  box-shadow: inset 1px 1px 2px black;
 }
