@@ -33,7 +33,50 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* down to be remove later */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 1.5;
 }
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* .montserrat-heading-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main-heading {
+  font-weight: 700;
+}
+
+.open-sans-body-font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+} */
 
 img {
   max-width: 100%;
@@ -47,7 +90,10 @@ textarea,
 select,
 button {
   font: inherit;
-  transition: box-shadow 0.25s ease, transform 0.15s ease, font-size 0.15s ease,
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.15s ease,
+    font-size 0.15s ease,
     border-color 0.2s ease;
 }
 
@@ -68,6 +114,10 @@ a {
 
 .inline-link {
   display: inline;
+}
+
+.static-image {
+  flex-shrink: 1;
 }
 /* ||End of  Utility class||*/
 
@@ -92,6 +142,12 @@ main {
 
 .header > h1 {
   align-self: center;
+}
+.header-button {
+  flex-shrink: 2;
+}
+.header-text {
+  flex-shrink: 2;
 }
 
 /* || End Of Header Styles||*/
@@ -138,6 +194,11 @@ a {
 .form-element > input {
   padding: 0.6em 1em;
   border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.form-element > input[type="submit"] {
+  border: 0;
 }
 .form-element a {
   color: var(--meta-data-color);
@@ -154,6 +215,7 @@ a {
   box-shadow: 1.6px 1.6px 1.5px hsl(44, 100%, 49%)
     /* -1.2px -1.2px 1px hsl(44, 100%, 49%) */;
   border-radius: 3px;
+  /* transition: all 0.3s ease; */
 }
 
 .button--white-text {
@@ -161,6 +223,9 @@ a {
   text-shadow: 1.3px 1.3px 3px rgba(0, 0, 0, 0.863);
 }
 
+/* .button:hover {
+  transform: scaleX(1.11);
+} */
 /* || End Of button ||*/
 
 /* || sign-up button||*/
@@ -202,7 +267,9 @@ a {
 .login-section input:focus {
   outline: none;
   border-color: #ffc72c;
-  box-shadow: 0 0 0 3px rgba(255, 199, 44, 0.35), 0 8px 18px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 0 0 3px rgba(255, 199, 44, 0.35),
+    0 8px 18px rgba(0, 0, 0, 0.15);
   transform: scale(1.02);
   font-size: 1.02rem;
 }
@@ -230,7 +297,8 @@ a {
   flex-grow: 1;
   padding: var(--card-padding);
   border-radius: 5px;
-  box-shadow: 1px 1px 3px hsla(0, 0%, 70%, 0.685),
+  box-shadow:
+    1px 1px 3px hsla(0, 0%, 70%, 0.685),
     -1px -1px 3px hsla(0, 0%, 70%, 0.678);
 }
 /* to be change later*/
